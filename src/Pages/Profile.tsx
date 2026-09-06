@@ -61,13 +61,22 @@ function Profile() {
         <p>“{quote}”</p>
       </blockquote>
 
-      <button
-        type="button"
-        className="profile-btn profile-btn-secondary"
-        onClick={() => navigate('/problems')}
-      >
-        Back to problems
-      </button>
+      <div className="profile-actions">
+        <button
+          type="button"
+          className="profile-btn profile-btn-primary"
+          onClick={() => navigate('/author')}
+        >
+          Become an author
+        </button>
+        <button
+          type="button"
+          className="profile-btn profile-btn-secondary"
+          onClick={() => navigate('/problems')}
+        >
+          Back to problems
+        </button>
+      </div>
     </div>
   )
 }
