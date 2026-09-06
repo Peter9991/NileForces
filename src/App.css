@@ -1,3 +1,37 @@
+:root {
+  --text: #162533;
+  --text-h: #0096dc;
+  --bg: #ffffffc2;
+  --border: #003c73;
+  --code-bg: #001a33;
+  --accent: #0096dc;
+  --accent-bg: rgba(0, 150, 220, 0.15);
+  --accent-border: rgba(0, 150, 220, 0.5);
+  --social-bg: rgba(0, 60, 115, 0.35);
+  --shadow:
+    rgba(0, 150, 220, 0.2) 0 10px 15px -3px, rgba(0, 0, 0, 0.4) 0 4px 6px -2px;
+}
+
+.home {
+  position: relative;
+  min-height: 100%;
+}
+.home-text {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.home-logo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
