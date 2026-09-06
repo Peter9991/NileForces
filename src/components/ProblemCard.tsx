@@ -5,13 +5,13 @@ interface ProblemCardProps {
 }
 
 export default function ProblemCard({ problem }: ProblemCardProps) {
-  // Helper to color-code the difficulty badge
+
   const getDifficultyStyles = (difficulty: string) => {
     switch (difficulty.toLowerCase()) {
-      case 'easy': return { bg: '#dcfce7', text: '#166534' }; // Green
-      case 'medium': return { bg: '#fef08a', text: '#854d0e' }; // Yellow
-      case 'hard': return { bg: '#fee2e2', text: '#991b1b' }; // Red
-      default: return { bg: '#f3f4f6', text: '#374151' }; // Gray (fallback)
+      case 'easy': return { bg: '#dcfce7', text: '#166534' };
+      case 'medium': return { bg: '#fef08a', text: '#854d0e' };
+      case 'hard': return { bg: '#fee2e2', text: '#991b1b' };
+      default: return { bg: '#f3f4f6', text: '#374151' };
     }
   };
 
