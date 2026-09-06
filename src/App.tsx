@@ -1,10 +1,10 @@
-// App.tsx
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
-import Profile from './pages/Profile';
-import Problems from './pages/Problems';
-import ProblemPage from './pages/ProblemPage';
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/NavBar'
+import HomePage from './Pages/HomePage'
+import Problems from './Pages/Problems'
+import Profile from './Pages/Profile'
+import AuthorPage from './Pages/AuthorPage'
+import ProblemPage from './Pages/ProblemPage'
 
 export default function App() {
   return (
@@ -14,8 +14,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/problems" element={<Problems />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/problems/:id" element={<ProblemPage />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/author" element={<AuthorPage />} />
         </Routes>
       </main>
     </>

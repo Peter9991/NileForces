@@ -194,10 +194,133 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.profile-field input:focus {
+.profile-field textarea {
+  padding: 12px 14px;
+  border: 1px solid #c5d4e0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+  color: var(--text);
+  background: #fff;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
   outline: none;
   border-color: #0096dc;
   box-shadow: 0 0 0 3px rgba(0, 150, 220, 0.2);
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.author {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
+
+.author-header {
+  margin-bottom: 28px;
+}
+
+.author-subtitle {
+  margin: 10px 0 0;
+  color: #5a6b7a;
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+.author-form .profile-field {
+  margin-bottom: 20px;
+}
+
+.author-tests {
+  margin: 8px 0 28px;
+}
+
+.author-tests-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.author-tests-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #003c73;
+}
+
+.author-test-card {
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #f4f8fb;
+  border: 1px solid rgba(0, 60, 115, 0.12);
+}
+
+.author-test-card .profile-field {
+  margin-bottom: 14px;
+}
+
+.author-test-card .profile-field:last-child {
+  margin-bottom: 0;
+}
+
+.author-test-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #003c73;
+}
+
+.author-remove {
+  border: none;
+  background: transparent;
+  color: #b42318;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.author-remove:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.author-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.author-success {
+  padding: 28px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, rgba(0, 150, 220, 0.12), rgba(0, 60, 115, 0.06));
+  border: 1px solid rgba(0, 60, 115, 0.15);
+}
+
+.author-success h2 {
+  margin: 0 0 8px;
+  color: #003c73;
+}
+
+.author-success p {
+  margin: 0 0 20px;
+  color: var(--text);
 }
 
 .profile-stat {
