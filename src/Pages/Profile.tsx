@@ -17,50 +17,56 @@ function Profile() {
     [],
   )
 
+  const initials = useMemo(() => {
+    const parts = name.trim().split(/\s+/).filter(Boolean)
+    if (parts.length === 0) return '?'
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
+    return (parts[0][0] + parts[1][0]).toUpperCase()
+  }, [name])
+
   return (
-    <div className="home">
-      <h1>Profile</h1>
-      <p>
-        Name:{' '}
+    <div className="profile">
+      <header className="profile-header">
+        <div className="profile-avatar" aria-hidden="true">
+          {initials}
+        </div>
+        <div className="profile-header-text">
+          <p className="profile-label">Your profile</p>
+          <h1 className="profile-title">{name || 'Anonymous'}</h1>
+        </div>
+      </header>
+
+      <label className="profile-field">
+        <span>Display name</span>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          style={{ padding: '6px 8px', borderRadius: '4px', border: '1px solid #003c73' }}
+          placeholder="Enter your name"
         />
-      </p>
-      <p style={{ marginTop: '16px' }}>Problems solved: {solved}</p>
+      </label>
+
+      <section className="profile-stat">
+        <p className="profile-stat-label">Problems solved</p>
+        <p className="profile-stat-value">{solved}</p>
+        <button
+          type="button"
+          className="profile-btn profile-btn-primary"
+          onClick={() => setSolved((n) => n + 1)}
+        >
+          Mark one solved
+        </button>
+      </section>
+
+      <blockquote className="profile-quote">
+        <p>“{quote}”</p>
+      </blockquote>
+
       <button
         type="button"
-        onClick={() => setSolved((n) => n + 1)}
-        style={{
-          backgroundColor: '#0096dc',
-          color: 'white',
-          padding: '8px 16px',
-          borderRadius: '5px',
-          border: 'none',
-          cursor: 'pointer',
-          marginTop: '8px',
-        }}
+        className="profile-btn profile-btn-secondary"
+        onClick={() => navigate('/problems')}
       >
-        +1 Solved
-      </button>
-      <p style={{ marginTop: '24px', fontStyle: 'italic', color: '#003c73' }}>
-        "{quote}"
-      </p>
-      <button
-        type="button"
-        onClick={() => navigate('/')}
-        style={{
-          backgroundColor: '#507FA9',
-          color: 'white',
-          padding: '8px 16px',
-          borderRadius: '5px',
-          border: 'none',
-          cursor: 'pointer',
-          marginTop: '24px',
-        }}
-      >
-        Back Home
+        Back to problems
       </button>
     </div>
   )

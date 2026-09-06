@@ -1,18 +1,28 @@
+import { useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import '../App.css'
-import { useNavigate } from 'react-router-dom'
 
 function HomePage() {
   const navigate = useNavigate()
 
   return (
     <div className="home">
-      <img src={logo} alt="NileForces" className="home-logo" />
-      <h1>NileForces</h1>
-      <p className="home-text">NileForces is a platform for Problem Solving For Nile University Students.</p>
-      <button onClick={() => navigate('/profile')} style={{backgroundColor: '#507FA9', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none', cursor: 'pointer', marginTop: '20px'}}>
-        Get Started
-    </button>
+      <div className="home-card">
+        <img src={logo} alt="Nile University" className="home-logo" />
+        <p className="home-label">Nile University</p>
+        <h1 className="home-title">NileForces</h1>
+        <p className="home-text">
+          A platform for problem solving made for Nile University students.
+          Practice, improve, and track your progress.
+        </p>
+        <button
+          type="button"
+          className="profile-btn profile-btn-primary home-cta"
+          onClick={() => navigate('/problems')}
+        >
+          Get Started
+        </button>
+      </div>
     </div>
   )
 }
