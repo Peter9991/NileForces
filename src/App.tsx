@@ -1,7 +1,10 @@
+// App.tsx
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
-import ProblemPage from './pages/ProblemPage'; 
+import Profile from './pages/Profile';
+import Problems from './pages/Problems';
+import ProblemPage from './pages/ProblemPage';
 
 export default function App() {
   return (
@@ -10,10 +13,11 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/problems" element={<Problems />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/problems/:id" element={<ProblemPage />} />
-          
         </Routes>
       </main>
     </>
-  );
+  )
 }

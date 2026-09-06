@@ -50,7 +50,7 @@ export default function ProblemPage() {
       
       {/* LEFT PANEL */}
       <div style={{ width: '50%', padding: '32px', overflowY: 'auto', boxSizing: 'border-box', borderRight: '1px solid #eaeaea' }}>
-        <Link to="/" style={{ display: 'inline-block', marginBottom: '24px', textDecoration: 'none', color: '#2563eb' }}>
+        <Link to="/problems" style={{ display: 'inline-block', marginBottom: '24px', textDecoration: 'none', color: '#2563eb' }}>
           ← Back to Problems
         </Link>
         
